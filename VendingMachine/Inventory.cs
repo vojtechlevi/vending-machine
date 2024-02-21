@@ -33,10 +33,12 @@ public class Inventory
     
     public void DisplayUserInventory(User user)
     {
+        var i = 0;
         Console.WriteLine($"{user.Name}'s Inventory:");
         foreach (Item item in items)
         {
-            Console.WriteLine($"{item.Name} - {item.Price}kr");
+            i++;
+            Console.WriteLine($"[{i}] {item.Name} - {item.Price}kr");
         }
     }
     
